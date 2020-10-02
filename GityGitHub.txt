@@ -1,0 +1,149 @@
+/* CONFIGURAR ENTORNO */
+
+git config --global user.name " "
+git config --global user.email " "
+
+
+/* CREAR REPOSITORIO */
+
+**Para nuevos repositorios
+git init        //en carpeta master
+git remote add origin <dir-repo>
+
+**Para repositorios existentes:
+git clone <dir-repo>
+
+
+-------
+/* GESTIONAR CAMBIOS */
+
+git add .                   //añadir archivos a Staging
+git commit -m 'comentario'  //se confirman cambios
+
+
+/* REVISAR CAMBIOS */
+
+git log                         // muestra todos los commit
+git log --stat                  // muestra todos los commit junto con el detalle
+git show <nombre de archivo>    //muestra cambios del archivo
+git diff #(old commit) #(new commit)        //compara commits
+
+
+/* RESTAURAR CAMBIOS */
+
+git checkout ### <archivo> | .      //permite ver un archivo en especifico como estaba antes
+git checkout master <archivo> | .   //regresa al head de los commits
+
+
+/* ELIMINAR CAMBIOS */
+git reset HEAD <archivo> | .    //De Staging a Unstaged, les quita el add
+
+**Cuidado Elimina archivos
+git rm --cached <archivo>       //Elimina los archivos del área de Staging pero los mantiene en nuestro disco duro
+git rm --force <archivo>        //Elimina los archivos de Git y del disco duro
+
+**Cuidado Regres en el tiempo sin vuelta atras
+git reset ### --hard    //regresa al commit indicado, sin guardar Staging
+git reset ### --soft    //mantiene los cambios en el Staging
+
+
+------
+/* CREAR RAMAS */
+git branch <nombre>         //Crea rama
+git checkout -b <nombre>    //Crea rama y se mueve a ella
+
+/* MOVERSE EN RAMAS */
+git checkout <nombre>       //Se mueve a la rama indicada
+
+/* MERGE RAMAS */
+git merge <rama>        //Se realiza desde la rama principal
+
+Comandos de Git
+
+git config Muestra la configuracion que tiene
+
+git --global user.name "NOMBRE" Asigna el nombre global(a todos) de la cuenta
+
+git --global user.email "CORREO" Asigna la cuenta global(a todos) de la cuenta
+
+git init Inicia un Repositorio nuevo!
+
+git status Muestra los archivos agrgados y los que no
+
+git add EJEMPLO.txt Agrega el archivo a la lista de espera para cambios en Carpeta Raiz
+
+git add . Agrega todos los archivos a la lista de espera en Carpeta Raiz
+
+git commit Hace los cambios de una version a otra
+
+git rm --cached NOMBRE.TXT Borrar de git el archivo cuando esta en stage y de la memoria cache de git
+
+git commit -m "cambioJS" Hace un commit con un nombre IMPORTANTE para diferenciar
+
+git commit am "cambiosJS" Hace un commit y hace el add automaticamente
+git log Muestra los commits
+
+git log --oneline Muestra los commits resumidos
+
+git log --stat Muestra los commits con los cambios
+
+Q Para salir del git log
+
+git show Muestra los cambios entre commits
+
+git show NOMBRE.TXT Muesta los cambios entre commits y la version
+
+Esc + i Para escribir en Vim
+
+Esc + shift + zz Sale de Vim
+
+git diff Compara el archivo que esta en stagin con el anteriores
+
+git diff TAGVIEJO TAG NUEVO Compara los cambios entra los tags del diff
+
+git reset TAG --hard Borra los cambios hasta el tag
+
+git reset TAG --soft Borra los cambio hasta el tag y te pone en el stage
+
+git chekout TAGVIEJO Chekea los antiguos commits
+git checkout master Vuelve a Mater
+
+git branch RAMA Crea una Rama
+
+git checkout RAMA Chekea la rama
+
+Master-----o             o-----o-----o
+           |             |
+           Otra Rama-----o
+
+
+
+
+Comandos de la terminal de Linux
+
+ls Muestra todos los archivos que estan dentro de la carpeta Raiz
+
+ls -l Te mustra todos los archivos de la carpeta Raiz!
+ls - al Mustra todos los archivos mas los ocultos
+
+pwd Te dice donde esta ubicada la carpeta Raiz
+
+cd c/RUTA/RUTA Te lleva a la ruta DOS PUNTOS : NO FUNCIONAN omitelos
+
+cd / Te envia a la raiz de Linux
+
+cd ..  de la ruta
+
+clear Limpia la consola
+
+Ctrl + l Limpia la consola
+
+mkdir NOMBRE Crea una carpetas en la carpeta Raiz
+
+touch NOMBRE.TXT Crea un archivo en la Carpeta Raiz
+
+cat NOMBRE.TXT Muestra lo que hay dentro del archivo en texto plano
+
+history Muestra los comandos que has usado EN TODA TU HISTORIA de la consola
+
+rm NOMBRE.TXT borra el archivo TEN RESPONSIVILIDAD puedes borrarle la mente a tu pc
